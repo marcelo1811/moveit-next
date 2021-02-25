@@ -1,24 +1,27 @@
+import { useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-  const hasActiveChallenge = false;
+  const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
 
   return (
     <div className={styles.challengeBoxContainer}>
-      { hasActiveChallenge ? (
+      { activeChallenge ? (
           <div className={styles.challengeActive}>
-            <header>Ganhe 400 xp</header>
+            <header>{activeChallenge.amount}</header>
 
             <main>
-              <img src='icons/body.svg' />
-              <strong>Novo desafio</strong>
-              <p>Levante e faça caminhada de 3 minutos.</p>
+              <img src={`icons/${activeChallenge.type}.svg`} />
+              <strong>{activeChallenge.description}</strong>
+              <p>{activeChallenge.amount}</p>
             </main>
 
             <footer>
               <button
                 type='button'
                 className={styles.challengeFailedButton}
+                onClick={resetChallenge}
               >
                 Falhei
               </button>
