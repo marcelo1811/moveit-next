@@ -1,7 +1,7 @@
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-  const hasActiveChallenge = true;
+  const hasActiveChallenge = false;
 
   return (
     <div className={styles.challengeBoxContainer}>
@@ -31,7 +31,7 @@ export function ChallengeBox() {
             </footer>
           </div>
         ) : (
-          <div className={styles.challengeNotActivep}>
+          <div className={styles.challengeNotActive}>
             <strong>Finalize um ciclo para receber um desafio</strong>
             <p>
               <img src="icons/level-up.svg" alt="Level up" />

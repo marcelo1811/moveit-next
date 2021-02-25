@@ -4,7 +4,7 @@
   background: var(--white);
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-  padding-bottom: 1.5rem 2rem;
+  padding: 1.5rem 2rem;
 
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@
 
 .challengeActive footer {
   display: grid;
-  grid-template: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
