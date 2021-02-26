@@ -9,6 +9,7 @@ export function ChallengeBox() {
 
   function handleChallengeSucceeded() {
     completeChallenge()
+    resetCountdown();
   }
 
   function handleChallengeFailed() {
