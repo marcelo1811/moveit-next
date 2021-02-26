@@ -21,8 +21,7 @@ let countdownTimeout: NodeJS.Timeout
 export function CountdownProvider({ children }: CountdownProviderProps) {
   const { startNewChallenge } = useContext(ChallengesContext)
   
-  // TODO: change time to 25 min
-  const [time, setTime] = useState(0.1 * 30);
+  const [time, setTime] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
